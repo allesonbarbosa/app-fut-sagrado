@@ -11,16 +11,21 @@ import 'vuetify/styles'
 // Composables
 import { createVuetify } from 'vuetify'
 
+const myLightTheme = {
+  dark: false,
+  colors:{
+    background: '#290052',
+    primary: '#540A6E',
+    secondary: '#80148A'
+  }
+}
+
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   theme: {
-    themes: {
-      light: {
-        colors: {
-          primary: '#1867C0',
-          secondary: '#5CBBF6',
-        },
-      },
-    },
+    defaultTheme: 'myLightTheme',
+    themes:{
+      myLightTheme
+    }
   },
 })
